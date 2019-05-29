@@ -1,5 +1,6 @@
 // fontColor
 $fontColorBase: #FFF;
+$colorHover: #D2691E;
 
 //fontFamily
 $fontFamilyTitle: 'Luminari','Segoe Script',sans-serif;
@@ -25,7 +26,7 @@ $fontFamilySub: 'Snell Roundhand','Mv Boli',sans-serif;
     top: $top;
 }
 
-
+//mainの中の要素のデザイン
 main {
     height: 100vh;
     width: 100%;
@@ -37,30 +38,38 @@ main {
 
     h1 {
         @include fontTitle();
-        @include position(15%, 10%);
+        @include position(10%, 10%);
 
     }
 
     h2 {
         @include fontTitle();
-        @include position(20%, 25%);
+        @include position(15%, 25%);
+    }
+
+    img {
+        @include position(25%, 40%);
+        height: 35%;
+        transform: rotate(-25deg);
     }
 
     .links {
-        @include position(20%, 40%);
+        @include position(15%, 40%);
         color: $fontColorBase;
         font-family: $fontFamilySub;
+        font-weight: bold;
 
         div {
             margin-bottom: 25px;
+            display: none;
 
             a {
                 text-decoration: none;
                 transition: color 0.5s;
-            }
 
-            a:hover {
-                color: #D2691E
+                &:hover {
+                    color: $colorHover;
+                }
             }
         }
     }
@@ -69,5 +78,17 @@ main {
         position: absolute; 
         right: 5%;
         bottom: 10%;
+    }
+
+    i {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color: $fontColorBase;
+        cursor: pointer;
+        
+        &:hover {
+            color: $colorHover;
+        }
     }
 }
