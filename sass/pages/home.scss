@@ -3,11 +3,11 @@
 
 @import "../base/_reset.scss";
 
-@mixin font(){
+@mixin text( $color, $textSize){
     font-family: 'BebasNeue-Regular';
-    text-align: left;
-    font-size: 18px;
-    color: white;
+    color: $color;
+    font-size: $textSize;
+    padding: 5px;
 }
 
 %posion{
@@ -22,50 +22,58 @@
     position: relative
 }
 
+.containar{
+  flex-flow: column wrap;
+  justify-items: center;
+  align-items: center;
+
+}
+
 .group-name{
-    @include font;
-    @extend %posion;
-    top: 200px;
+    @include text( rgb(240, 230, 230), 100px);
+     @extend %posion;
+    top: 45%;
+    
+
 }
 
 .artist-name{
-    @include font;
+    @include text(  rgb(240, 230, 230), 20px );
     @extend %posion;
-    top:300px;
-    
+    top:60%;
     letter-spacing: 2px;
-    
-    
+   
 }
-
+    
 // countdown-clock
 
 .yycountdown-box{
     text-align:center;
     margin:10px 0;
-    color:#000000;
+    @include text( black, 50px);
   }
-   
-  #timerOlympic .yycountdown-box .yyc-day{
-    font-size:3.0em;
-    color:#0085C7;
+
+
+  #timer .yycountdown-box .yyc-day{
+    font-size:2.0em;
+    color: red;
   }
-  #timerOlympic .yycountdown-box .yyc-hou{
-    font-size:3.0em;
+  #timer .yycountdown-box .yyc-hou{
+    font-size:2.0em;
     color:#F4C300;
   }
-  #timerOlympic .yycountdown-box .yyc-min{
-    font-size:3.0em;
-    color:#009F3D;
+  #timer .yycountdown-box .yyc-min{
+    font-size:2.0em;
+    color: purple;
   }
-  #timerOlympic .yycountdown-box .yyc-sec{
-    font-size:3.0em;
-    color:#DF0024;
+  #timer .yycountdown-box .yyc-sec{
+    font-size:2.0em;
+    color: green;
   }
    
-  #timerOlympic .yycountdown-box .yyc-day-text,
-  #timerOlympic .yycountdown-box .yyc-hou-text,
-  #timerOlympic .yycountdown-box .yyc-min-text,
-  #timerOlympic .yycountdown-box .yyc-sec-text{
+  #timer .yycountdown-box .yyc-day-text,
+  #timer .yycountdown-box .yyc-hou-text,
+  #timer .yycountdown-box .yyc-min-text,
+  #timer .yycountdown-box .yyc-sec-text{
     font-size:1.0em;
   }

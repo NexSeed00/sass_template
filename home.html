@@ -6,26 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>嵐~ARASHI~ </title>
     <link rel="stylesheet" href="./css/pages/jquery.yycountdown.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/pages/home.css">
 
 </head>
 <body>
-    
-    <div>
+    <header>
+        nav bar 
+    </header>
+
+    <div class="containar">
         <img class="home-bg" src="./assets/img/home-bacground.jpg" alt="">
+
+        <h1 class="group-name font">ARASHI</h1>
+        <div class="artist-name font">Masaki Aiba / Jun Matsumoto / Kazunari Ninomiya<br>Satoshi Ohno / Sho Sakurai</div>
+  
+        
     </div>
 
     
-    <h1 class="group-name">ARASHI</h1>
-    <div class="artist-name">Masaki Aiba / Jun Matsumoto / Kazunari Ninomiya<br>Satoshi Ohno / Sho Sakurai</div>
-  
-    <!-- COUNTDOWN -->
-    <div class="yycountdown-box">
-        <div id='olympic'>ARASI<span>●</span>活動停止までカウントダウン</div>
     
-        <div id='olympicDate'>2020年12月31日</div>
+    <!-- COUNTDOWN -->
+    <div id="show" class="yycountdown-box">
+        <div class="countdownText">ARASHI活動停止までカウントダウン</div>
+    
+        <div class="countdownText">2020年12月31日</div>
         
-        <div id='timerOlympic'></div>
+        <div id='timer'></div>
     </div> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
