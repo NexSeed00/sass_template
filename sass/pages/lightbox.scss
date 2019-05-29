@@ -1,0 +1,53 @@
+    #over {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align:center;
+  }
+  
+  .img-box {
+    position: relative;
+    margin-top: 100px;
+    display:inline-block;
+
+    .close {
+      position:absolute;
+      right:20px;
+      top:10px;
+      font-size:2em;
+      font-weight:bold;
+      color:#fff;
+      cursor:pointer;
+    }
+     
+    .box {
+      position: absolute;
+      text-align: center;
+      h1 {
+        font-size: 25px;
+      }
+      p{
+        font-size: 20px;
+        font-family: 'HanziPen SC',sans-serif;
+      }
+    }
+  }
+  
+  
+  
+  .lightbox {
+    width: 1000px;
+    margin-left: 250px;
+    margin-top: 150px;
+
+
+    img {
+      width: 1000px;
+      height: 500px;
+    }
+  
+  }
+
+  

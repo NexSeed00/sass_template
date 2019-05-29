@@ -1,3 +1,5 @@
+// import { DH_UNABLE_TO_CHECK_GENERATOR } from "constants";
+
 $(function() {
     $('.fa-baseball-ball').on('click', function() {
         console.log("AAA");
@@ -29,4 +31,45 @@ $(function() {
             })
         })
     })
+
+    $('.akirasan').on('click', function() {
+        console.log('AAA');
+        $('.akirasan').animate({
+            'top': '-100px',
+            'left': '270px',
+            
+        })
+        
+    })
+    $('.akirasan').on('click',function() {
+        $('.akirasan').animate({
+            'top': '-190px',
+            'left': '-5px',
+            
+        })
+
+    
+    })
+
+    $('.akirasan').on('click',function() {
+        $('.akirasan').animate({
+            'top': '-100px',
+            'left': '-260px',
+            
+        })
+
+    
+    })
+
+    $('.akirasan').on('click',function() {
+        $('.akirasan').animate({
+            'top': '0px',
+            'left': '0px',
+            
+        })
+
+    
+    })
+
+
 })
