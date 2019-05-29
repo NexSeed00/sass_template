@@ -1,4 +1,9 @@
-div{
-    background-color: gold;
-    
+// _と拡張子を忘れずに！**でファイル中身を全部コピーできる。
+@import "../base/_reset.scss";
+
+.home-bg{
+    width: 100%;
+    height: 100vh;
 }
+
+
