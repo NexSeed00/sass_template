@@ -1,0 +1,25 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#facebook{
+    color:blue;
+    margin-right: 20px;
+}
+
+#twitter{
+    color: cyan;
+    margin-right: 20px;
+}
+
+#instagram{
+    color: rgb(236, 29, 236);
+    margin-right: 100px;
+}

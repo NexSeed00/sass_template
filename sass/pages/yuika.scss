@@ -1,0 +1,44 @@
+.carousel{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.navigation{
+    position: absolute;
+    // bottom: 20;
+    // right: 0;
+    // width: 40%;
+    // height: 10%;
+}
+
+.navbar{
+    background-color:lavender;
+}
+
+.nav-item{
+    font-size: 20px;
+    
+    :hover{
+        color:fade-in($color:#ecd073 , $amount: 0.3)
+    };
+}
+.history{
+    overflow-y: scroll;
+    width: 500px;
+    height: 200px;
+    p{
+        font-size: 16px;
+        color: white;
+    }
+    
+    h2{
+        font-size:24px;
+        color: lavender;
+    }
+    
+}
+
+.scroll::-webkit-scrollbar{height:10px;}/*バーの太さ*/;
+.scroll::-webkit-scrollbar-thumb{background:black;}/*バーの色*/
+
