@@ -9,7 +9,7 @@
     font-size: $textSize;
     padding: 5px;
 }
-
+// アニメーションのための準備
 @mixin keyframes($animation-name) {
   @-webkit-keyframes animationSample {
     @content;
@@ -39,12 +39,13 @@
 }
 }
 
-
+// 写真の上に要素を動かす準備
 %posion{
     z-index: 3;
     position: absolute;
 } 
 
+// ホーム写真
 .home-bg{
     width: 100%;
     height: 100vh;
@@ -52,13 +53,8 @@
     position: relative
 }
 
-.containar{
-  flex-flow: column wrap;
-  justify-items: center;
-  align-items: center;
 
-}
-
+// タイトル
 .group-name{
     @include text( rgb(240, 230, 230), 100px);
     @extend %posion;
@@ -77,19 +73,48 @@
    
 }
 
-.containar{
-  .tour-logo{
+// ツアーロゴ
+.tour-logo{
     @extend %posion;
     bottom: 5%;
     right: 5%;
     width: 200px;
     height: 200px;
-    opacity: .8;
+    opacity: 0;
   }
-}
+.tour-logo:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+  // Album info
+  .album-info{
+    @include text( white, 20px );
+    @extend %posion;
+    bottom: 5%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 2em;
+    padding-top: 1%;
+    
+    
+  }
+
+  .album-info:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+
+// タイトルアニメーション
 
 #fadeInName{
   @include animation(animationSample 2s ease 0.5s);	
+  
   }
     
 // countdown-clock
@@ -98,6 +123,7 @@
     text-align:center;
     margin:10px 0;
     @include text( black, 50px);
+    // font-family: 'M PLUS Rounded 1c', sans-serif;
   }
 
 
@@ -124,6 +150,8 @@
   #timer .yycountdown-box .yyc-sec-text{
     font-size:1.0em;
   }
+
+  // アニメーション
 
   #fadeInTimer{
     @include animation(animationSample 10s ease 1.5s);	
