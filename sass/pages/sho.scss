@@ -1,0 +1,73 @@
+// fontColor
+$fontColorBase: #FFF;
+
+//fontFamily
+$fontFamilyTitle: 'Luminari','Segoe Script',sans-serif;
+$fontFamilySub: 'Snell Roundhand','Mv Boli',sans-serif;
+
+// fontSize
+@for $i from 1 through 7 {
+    .fs-#{$i} {
+        font-size: 10px * $i;
+    }
+}
+
+//タイトルのフォント
+@mixin fontTitle {
+    color: $fontColorBase;
+    font-family: $fontFamilyTitle
+}
+
+//コンテンツの位置
+@mixin position($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+
+main {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/img/Culture_AladdinTrailer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    h1 {
+        @include fontTitle();
+        @include position(15%, 10%);
+
+    }
+
+    h2 {
+        @include fontTitle();
+        @include position(20%, 25%);
+    }
+
+    .links {
+        @include position(20%, 40%);
+        color: $fontColorBase;
+        font-family: $fontFamilySub;
+
+        div {
+            margin-bottom: 25px;
+
+            a {
+                text-decoration: none;
+                transition: color 0.5s;
+            }
+
+            a:hover {
+                color: #D2691E
+            }
+        }
+    }
+
+    iframe {
+        position: absolute; 
+        right: 5%;
+        bottom: 10%;
+    }
+}
