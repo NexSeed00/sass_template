@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Bungee+Inline|Pacifico|Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/pages/yuika.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- カルーセル -->
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-interval="10000">
@@ -26,40 +28,58 @@
                     <img src="./assets/yuikaimg/MIB3.jpg" class="d-block w-100" alt="MIB3">
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <!-- <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
-                </a>
+                </a> -->
             </div>
+
+            <!-- ヘッダーナビ -->
+            <header>
+                <ul class="nav justify-content-center">   
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">History</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </header>
             
+            
+            
+            <!-- 文字ナビ -->
             <div class="navigation">
-            <nav id="navbar-example2" class="navbar navbar-light bg-light">
+            <nav id="navbar-example2" class="navbar navbar-light">
                 <!-- <a class="navbar-brand" href="#"></a> -->
                 <ul class="nav nav-pills">
                   <li class="nav-item">
-                    <a class="nav-link" href="#profile">◇紹介◇</a>
+                    <a class="nav-link" href="#profile">Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#kikkake">◇きっかけ◇</a>
+                    <a class="nav-link" href="#kikkake">Beginning</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Many More!</a>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#one">◇映画◇</a>
-                      <a class="dropdown-item" href="#two">◇家族◇</a>
+                      <a class="dropdown-item" href="#one">Movies</a>
+                      <a class="dropdown-item" href="#two">Familes</a>
                       <div role="separator" class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#three">◇2019年 出演映画◇</a>
-                      <a class="dropdown-item" href="#four">◇受賞◇</a>
+                      <a class="dropdown-item" href="#three">Movies in 2019</a>
+                      <a class="dropdown-item" href="#four">Award</a>
                     </div>
                   </li>
                 </ul>
             </nav>
 
-            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="history">
+            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="history" >
                 <h2 id="profile">◇紹介◇</h2>
                 <p>名前：Willard Carroll Smith Jr.</p>
                 <p>職業：俳優、映画プロデューサー、ラッパー。</p>
@@ -83,7 +103,7 @@
                 <p>息子：Trey Smith 職業:DJ </p>
                 <p>息子：Jaden Smith　職業：俳優、ラッパー　代表作：Best Kid</p>
                 <p>娘：Willow Smith　職業：女優、歌手、モデル　代表作：I am Legend</p>
-                <h2>◇家族と共演作品</h2>
+                <h2>◇家族と共演作品◇</h2>
                 <p>幸せの力　with 息子Jaden Smith</p>
                 <p>ベスト・キッド（製作）　with 息子Jaden Smith</p>
                 <p>アイ　アム　レジェンド with　娘Willow Smith</p>
@@ -95,10 +115,10 @@
             </div>
         </div>
     </div>
-        <footer class="footer">
 
-                <h3>Will Smith. All Rights Reserved.</h3>
-            
+    <!-- フッター -->
+        <footer class="footer">
+                <h3>©Will Smith. All Rights Reserved.</h3>
                 <div class="icons">
                     <a href="https://www.facebook.com/Will-Smith-92304305160/"><i id="facebook" class="fab fa-facebook-square fa-2x"></i></a>
                     <a href="https://twitter.com/willsmith"><i id="twitter" class="fab fa-twitter-square fa-2x"></i></a>
