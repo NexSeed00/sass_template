@@ -1,0 +1,86 @@
+.icon {
+    width: 100%;
+    height: 30px;
+    padding: 10px 0 10px 0;
+    color: pink;
+    display: flex;
+    justify-content: space-between;
+
+    .fas {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    .far {
+        font-size: 30px;
+       margin-right: 10px;
+    }
+}
+
+.itiro {
+    width: 100%;
+    height: 96vh;
+}
+main {
+    position: relative;
+
+    .introduce {
+        position: absolute;
+        width: 80%;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: -750px;
+        display: none;
+    }
+    .center {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: solid 2px silver;
+    }
+    .box {
+        background-color: whitesmoke;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 10px;
+        font-family: 'HanziPen SC',sans-serif;
+
+        p {
+            line-height: normal;
+        }
+    }
+    h1 {
+        font-size: 20px;
+        color: rgb(255, 230, 0);
+        font-family: 'Arial Black',sans-serif;
+    }
+    
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+        .img {
+            width: 100%;
+            height: 400px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+        }
+
+    
+        p {
+            font-family: 'HanziPen SC',sans-serif;
+            font-size: 20px;
+            line-height: normal;
+            // display: none;
+        }
+
+
+    
+}
