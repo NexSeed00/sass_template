@@ -6,7 +6,7 @@ var sassGlob = require('gulp-sass-glob'); //パーシャルをまとめて読み
 var sourcemaps = require('gulp-sourcemaps'); // source map作成 ②
 var autoprefixer = require('gulp-autoprefixer'); // ベンダープレフィックス ③
 var cleanCSS = require('gulp-clean-css'); // minify ④
-var rename = require('gulp-rename'); //ファイル名変更 ⑤
+var rename = require('gulp-rename'); //ファイル名変更 ⑤ L20でコメントアウト
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
