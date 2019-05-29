@@ -12,16 +12,16 @@ gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
-    .pipe(cleanCSS({keepBreaks: false}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
     }))
     // .pipe(rename({
-    //   suffix: '.min',
-    // }))
-    .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(sourcemaps.write('./'))
+      //   suffix: '.min',
+      // }))
+      .pipe(sass({outputStyle: 'expanded'}))
+      .pipe(sourcemaps.write('./'))
+    // .pipe(cleanCSS({keepBreaks: false}))
     .pipe(gulp.dest('./css'));
   });
  
