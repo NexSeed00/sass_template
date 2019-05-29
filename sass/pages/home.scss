@@ -10,6 +10,36 @@
     padding: 5px;
 }
 
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes animationSample {
+    @content;
+  }
+  @-moz-keyframes animationSample {
+    @content;
+  }  
+  @keyframes animationSample {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@include keyframes(animationSample){
+0% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+}
+
+
 %posion{
     z-index: 3;
     position: absolute;
@@ -31,19 +61,24 @@
 
 .group-name{
     @include text( rgb(240, 230, 230), 100px);
-     @extend %posion;
+    @extend %posion;
     top: 45%;
+    letter-spacing: 2px;
     
 
 }
 
 .artist-name{
     @include text(  rgb(240, 230, 230), 20px );
-    @extend %posion;
+    @extend .group-name;
     top:60%;
-    letter-spacing: 2px;
+    
    
 }
+
+#fadeInName{
+  @include animation(animationSample 2s ease 0.5s);	
+  }
     
 // countdown-clock
 
@@ -77,3 +112,9 @@
   #timer .yycountdown-box .yyc-sec-text{
     font-size:1.0em;
   }
+
+  #fadeInTimer{
+    @include animation(animationSample 10s ease 1.5s);	
+    }
+
+ 
