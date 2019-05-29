@@ -63,6 +63,7 @@
     @include text( rgb(240, 230, 230), 100px);
     @extend %posion;
     top: 45%;
+    left: 5%;
     letter-spacing: 2px;
     
 
@@ -74,6 +75,17 @@
     top:60%;
     
    
+}
+
+.containar{
+  .tour-logo{
+    @extend %posion;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: .8;
+  }
 }
 
 #fadeInName{
