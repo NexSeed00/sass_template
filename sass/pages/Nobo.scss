@@ -1,21 +1,38 @@
 @import "../base/_reset.scss";
 
 
+.container {
+
+    // background-color: red;
+}
+
+.row {
+
+    // background-image: url("../img/イチロー背景.jpg");
+    // background-repeat: no-repeat;
+    // background-color: red;
+}
 
 .bg-one {
 
+    
+    // background-image: url("../img/イチロー背景.jpg");
+    // background-repeat: no-repeat;
     height: 100px;
     width: 100%;
-    background-color: red;
+    // background-color: red;
     }
 
 
 
 .bg-two {
 
+    
+    // background-image: url("../img/イチロー背景.jpg");
+    // background-repeat: no-repeat;
     height: 100px;
     width: 100%;
-    background-color: yellow;
+    // background-color: yellow;
     }
 
     
@@ -91,38 +108,3 @@
     background-color: peru;
   }
   
-  .bg-nam {
-    height: 100px;
-    width: 100%;
-    background-color: pink;
-  }
-  
-  .bg-sau {
-    height: 100px;
-    width: 100%;
-    background-color: plum;
-  }
-  
-  .bg-sao {
-    height: 100px;
-    width: 100%;
-    background-color: purple;
-  }
-  
-  .bg-hoge {
-    height: 100px;
-    width: 100%;
-    background-color: wheat;
-  }
-  
-  .bg-fuga {
-    height: 100px;
-    width: 100%;
-    background-color: whitesmoke;
-  }
-  
-  .bg-tam {
-    height: 100px;
-    width: 100%;
-    background-color: powderblue;
-  }
