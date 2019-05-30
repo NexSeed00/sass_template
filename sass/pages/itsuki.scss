@@ -1,3 +1,18 @@
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+
 body {
     background-image: url('https://www.slashfilm.com/wp/wp-content/images/bad-boys-3-camera-test.jpg');
     background-size: cover;
@@ -8,15 +23,13 @@ body {
 }
 // https://ewedit.files.wordpress.com/2019/04/will-smith-1.jpg
   
-
-
 main {
     display: flex;
     justify-content: center;
     
 }
 .timeline {
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
 .navbar-brand {
@@ -39,17 +52,17 @@ main {
 .ninetiesH4, .zeroH4, .tensH4 {
     font-size: 300%;
     line-height: 60px;
-    color: white;
 
 }
-.nineties, .zero, .tens, .textH4 {
+.nineties, .zero, .tens {
     display: flex;
    p {
     font-size: 150%;
     line-height: 50px;
-    color: white;
    } 
 }
+
+
 
 
 
