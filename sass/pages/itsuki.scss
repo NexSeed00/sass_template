@@ -12,14 +12,19 @@ $breakpoints: (
     }
 }
 
-
 body {
-    background-image: url('https://www.slashfilm.com/wp/wp-content/images/bad-boys-3-camera-test.jpg');
+    background-image: url('https://pmcvariety.files.wordpress.com/2017/04/willsmith_actor.jpg?w=1000&h=563&crop=1');
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     color:black;
+
+    
+    @include media(s) {
+        background-image: url('https://www.jetss.com/wp-content/uploads/2019/03/idris-elba-suicide-squad-deadshot.jpg')
+    }
+
 }
 // https://ewedit.files.wordpress.com/2019/04/will-smith-1.jpg
   
@@ -29,7 +34,11 @@ main {
     
 }
 .timeline {
-    margin-top: 300px;
+    margin-top: 200px;
+    @include media(s) {
+        margin-top: 150px;
+    }
+    
 }
 
 .navbar-brand {
@@ -39,6 +48,7 @@ main {
 
 .navbar {
     font-size: 30px; 
+
 }
 
 .scroll-part {
@@ -48,18 +58,17 @@ main {
 }
 
 
-
 .ninetiesH4, .zeroH4, .tensH4 {
     font-size: 300%;
     line-height: 60px;
-
+    
 }
 .nineties, .zero, .tens {
     display: flex;
    p {
     font-size: 150%;
     line-height: 50px;
-   } 
+   }
 }
 
 
