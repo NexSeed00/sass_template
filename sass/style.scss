@@ -1,4 +1,12 @@
 @import "./base/_reset.scss";
 
-@import "./base/**";
+@import "./base/**"; //**は全部読み込んでいるよ
+
+@import "./modules/header";
+
+@import "./modules/footer";
+
+bg-one {
+    height: 100px;
+}
 
