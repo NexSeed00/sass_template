@@ -23,15 +23,28 @@
     }
      
     .box {
-      position: absolute;
-      text-align: center;
-      h1 {
-        font-size: 25px;
+      position: relative;
+      
+      div {
+        position: absolute;
+        top: 200px;
+        right: 30px;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        padding:10px;
+        line-height: normal;
+        
+
+        h1 {
+          font-size: 25px;
+        }
+        p{
+          font-size: 20px;
+          font-family: 'HanziPen SC',sans-serif;
+        }
+
       }
-      p{
-        font-size: 20px;
-        font-family: 'HanziPen SC',sans-serif;
-      }
+      
     }
   }
   
@@ -51,3 +64,9 @@
   }
 
   
+// .lightbox {
+//   background-image: url(/img/img01.jpg);
+//   width: 1000px;
+//   margin-left: 250px;
+//   margin-top: 150px;
+// }
