@@ -13,16 +13,32 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./css/pages/itsuki.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     
     <div class="container">
-        <header></header>
+        <header>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">TOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="yuika.html">PROFILE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="indexItsuki.html">HISTORY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </header>
         <main>
             <div class="timeline">
                 <nav id="navbar-example2" class="navbar navbar-light">
-                    <a class="navbar-brand" style="color: black;" href="#">出演作品</a>
+                    <a class="navbar-brand" style="color: white;" href="#">History</a>
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link" href="#nineties">1990s</a>
@@ -37,7 +53,10 @@
                     </ul>
                 </nav>
                 <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scroll-part">
-                    <h4 id="nineties" class="ninetiesH4">1990s</h4>
+                    <h4 id="nineties" style="font-size: 150%;
+                    line-height: 50px;
+                    color: white; height: 400px;">2008年の「最も稼いだ俳優番付」の1位になり、自身の主演作が『メン・イン・ブラック2』から『ハンコック』まで8作連続で全米初登場1位・興行収入1億ドル超えを記録!<br>このページではそんなウィル・スミスの出演作品をご紹介します</h4>
+                    <h4 id="zero" class="ninetiesH4"><p>1990s</p></h4>
                     <div class="nineties">
                         <p></p>
                         <p style="color: #007bff;">1992<br>1993<br>1995<br>1996<br>1997<br>1998<br>1999</p>
@@ -46,7 +65,7 @@
                             West</p>
                         <p></p>
                     </div>
-                    <h4 id="zero" class="zeroH4">2000s</h4>
+                    <h4 id="tens" class="zeroH4">2000s</h4>
                     <div class="zero">
                         <p></p>
                         <p style="color: #007bff;">2000<br>2001<br>2002<br>2003<br>2004<br>2005<br>2006<br>2007<br>2008</p>
@@ -54,7 +73,7 @@
                             Jersey Girl<br>Hitch<br>The Pursuit of Happyness<br>I Am Legend<br>Hancock, Seven Ponds</p>
                         <p></p>
                     </div>
-                    <h4 id="tens" class="tensH4">2010s</h4>
+                    <h4 id="" class="tensH4">2010s</h4>
                     <div class="tens">
                         <p></p>
                         <p style="color: #007bff;">2012<br>2013<br>2014<br>2015<br>2016<br>2017<br>2019</p>
@@ -65,8 +84,17 @@
                 </div>
             </div>
         </main>
-        <footer></footer>
+        
+
     </div>
+    <footer class="footer">
+        <h3>©Will Smith. All Rights Reserved.</h3>
+        <div class="icons">
+            <a href="https://www.facebook.com/Will-Smith-92304305160/"><i id="facebook" class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="https://twitter.com/willsmith"><i id="twitter" class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="https://www.instagram.com/willsmith/?hl=ja"><i id="instagram" class="fab fa-instagram fa-2x"></i></a>
+        </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
