@@ -1,7 +1,9 @@
 
 
+@import "../base/_reset";
+
 @mixin text( $color, $textSize){
-    font-family: 'BebasNeue-Regular';
+    font-family: 'Arial';
     color: $color;
     font-size: $textSize;
     padding: 5px;
@@ -117,13 +119,26 @@
     
 // countdown-clock
 
+@mixin bg(){
+  background: {
+    image: url(../../assets/img/background-arashi.jpg);
+     repeat: no-repeat;
+     size: cover;
+     attachment: fixed;
+}
+}
 
 .yycountdown-box{
     text-align:center;
-    margin:10px 0;
+    margin: 0;
     @include text( black, 50px);
-     
+    @include bg();
+    
   
+  }
+
+  .mg{
+    margin-bottom: .5em;
   }
 
 
@@ -156,5 +171,17 @@
   #fadeInTimer{
     @include animation(animationSample 10s ease 1.5s);	
     }
+  
+    // message
+    h2{
+      @include text(black, 25px);
+    }
 
- 
+    .card-body{
+      line-height: 2em;
+    }
+
+    // footer scss import
+
+    @import "../modules/_footer";
+  
