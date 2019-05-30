@@ -1,4 +1,160 @@
-div{
-    background-color: gold;
-    
+// _と拡張子を忘れずに！**でファイル中身を全部コピーできる。
+// @import "../base/_reset.scss";
+
+@import "../base/_reset.scss";
+
+@mixin text( $color, $textSize){
+    font-family: 'BebasNeue-Regular';
+    color: $color;
+    font-size: $textSize;
+    padding: 5px;
 }
+// アニメーションのための準備
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes animationSample {
+    @content;
+  }
+  @-moz-keyframes animationSample {
+    @content;
+  }  
+  @keyframes animationSample {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@include keyframes(animationSample){
+0% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+}
+
+// 写真の上に要素を動かす準備
+%posion{
+    z-index: 3;
+    position: absolute;
+} 
+
+// ホーム写真
+.home-bg{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    position: relative
+}
+
+
+// タイトル
+.group-name{
+    @include text( rgb(240, 230, 230), 100px);
+    @extend %posion;
+    top: 45%;
+    left: 5%;
+    letter-spacing: 2px;
+    
+
+}
+
+.artist-name{
+    @include text(  rgb(240, 230, 230), 20px );
+    @extend .group-name;
+    top:60%;
+    
+   
+}
+
+// ツアーロゴ
+.tour-logo{
+    @extend %posion;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+.tour-logo:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+  // Album info
+  .album-info{
+    @include text( white, 20px );
+    @extend %posion;
+    bottom: 5%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 2em;
+    padding-top: 1%;
+    
+    
+  }
+
+  .album-info:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+
+// タイトルアニメーション
+
+#fadeInName{
+  @include animation(animationSample 2s ease 0.5s);	
+  
+  }
+    
+// countdown-clock
+
+.yycountdown-box{
+    text-align:center;
+    margin:10px 0;
+    @include text( black, 50px);
+    // font-family: 'M PLUS Rounded 1c', sans-serif;
+  }
+
+
+  #timer .yycountdown-box .yyc-day{
+    font-size:2.0em;
+    color: red;
+  }
+  #timer .yycountdown-box .yyc-hou{
+    font-size:2.0em;
+    color:#F4C300;
+  }
+  #timer .yycountdown-box .yyc-min{
+    font-size:2.0em;
+    color: purple;
+  }
+  #timer .yycountdown-box .yyc-sec{
+    font-size:2.0em;
+    color: green;
+  }
+   
+  #timer .yycountdown-box .yyc-day-text,
+  #timer .yycountdown-box .yyc-hou-text,
+  #timer .yycountdown-box .yyc-min-text,
+  #timer .yycountdown-box .yyc-sec-text{
+    font-size:1.0em;
+  }
+
+  // アニメーション
+
+  #fadeInTimer{
+    @include animation(animationSample 10s ease 1.5s);	
+    }
+
+ 
