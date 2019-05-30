@@ -1,0 +1,53 @@
+body {
+    background-image: url('https://www.slashfilm.com/wp/wp-content/images/bad-boys-3-camera-test.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    color:black;
+}
+// https://ewedit.files.wordpress.com/2019/04/will-smith-1.jpg
+  
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+.timeline {
+    margin-top: 300px;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    color: white;
+}
+
+.navbar {
+    font-size: 30px; 
+}
+
+.scroll-part {
+    overflow-y: scroll;
+    width: 550px;
+    height: 400px;
+}
+
+
+
+.ninetiesH4, .zeroH4, .tensH4 {
+    font-size: 300%;
+    line-height: 60px;
+
+}
+.nineties, .zero, .tens {
+    display: flex;
+   p {
+    font-size: 150%;
+    line-height: 50px;
+   } 
+}
+
+
+
+
+
