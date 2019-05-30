@@ -40,8 +40,6 @@ $breakpoints: (
 }
 
 
-
-
 .navnav{
     font-size: 20px;
     font-family: 'Bungee Inline', cursive;
@@ -61,7 +59,7 @@ $breakpoints: (
 .history{
     
     overflow-y: scroll;
-    // overflow-y: hidden;
+    
     width: 480px;
     height: 200px;
 
@@ -78,3 +76,9 @@ $breakpoints: (
 
 
 };
+
+// .explode{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: center;
+// }
