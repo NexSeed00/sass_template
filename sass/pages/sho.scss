@@ -59,7 +59,6 @@ main {
     //レスポンシブデザイン（768px以下）
     @include media(m) {
         height: 130vh;
-        
     };
 
     h1 {
