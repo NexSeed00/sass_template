@@ -1,12 +1,6 @@
 
 $bgColor:grey;
 
-header{
-    height: 100px;
-    width: 100%;
-    background-color:beige;
-}
-
 main{
     background-color:$bgColor;
     padding: 20px;
@@ -61,42 +55,38 @@ main{
 
 
 
-menu{
-        display: flex;
-        justify-content: space-around;
+.menu{
+        // display: flex;
+        // justify-content: space-around;
         background-color: black;
         padding: 20px;
     
     
 
-    .menu{
-    height: 200px;
-    width: 200px;
+    .design{
+    height: 300px;
+    width: 300px;
     background-color: $bgColor;
     border-radius: 50%;
     text-align: center;
-        p{
-            font-size: 40px;
-            font-weight: bold;
-            font-family: cursive;
-            margin-top: 30px;
-        }
+        
+        font-size: 40px;
+        font-weight: bold;
+        font-family: cursive;
+        margin-top: 60px;
+        
     
     }
 
   
    
 
-  .menu:hover{
+  .design:hover{
         opacity: 0.5;
     }
 
     
     
-}
-
-.result{
-    display: none;
 }
 
 
