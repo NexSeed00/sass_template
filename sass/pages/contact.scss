@@ -1,0 +1,29 @@
+//上下マージン位置
+@mixin margin ($marginTop, $marginBottom) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+}
+
+//inputの幅
+$inputWidth: 50%;
+
+//formのデザイン
+form {
+    width: 100%;
+}
+
+.form-group {
+    @include margin(40px, 0);
+    width: $inputWidth;
+
+    label {
+        @include margin(0, 15px);
+    }
+}
+
+.btn {
+    @include margin(50px, 100px);
+    padding: 15px;
+    width: $inputWidth;
+}
+
