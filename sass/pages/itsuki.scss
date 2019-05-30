@@ -8,13 +8,15 @@ body {
 }
 // https://ewedit.files.wordpress.com/2019/04/will-smith-1.jpg
   
+
+
 main {
     display: flex;
     justify-content: center;
     
 }
 .timeline {
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 .navbar-brand {
@@ -37,13 +39,15 @@ main {
 .ninetiesH4, .zeroH4, .tensH4 {
     font-size: 300%;
     line-height: 60px;
+    color: white;
 
 }
-.nineties, .zero, .tens {
+.nineties, .zero, .tens, .textH4 {
     display: flex;
    p {
     font-size: 150%;
     line-height: 50px;
+    color: white;
    } 
 }
 
