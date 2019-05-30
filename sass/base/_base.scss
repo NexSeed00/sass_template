@@ -3,10 +3,9 @@ html {
 }
 
 main {
-    height: 100vh;
     width: 100%;
-    background-color: red;
+    // background-color: red;
     // background-image: url(image-path("../assets/css/img/background-arashi.jpg"))
+    background-image: url("../assets/img/background-arashi.jpg");
 }
 
-@import"../sass/base/_base.scss";

@@ -1,17 +1,22 @@
+
 .works {
-    background-image: url(https://cdn2.j-storm.co.jp/wp-content/uploads/2018/09/27182438/JACA-5761-1440x1269.jpg);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: fixed;
+    background: {
+        image: url(../../assets/img/JACA-5761-1440x1269.jpg);
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+
     text-align: center;
     h1 {
         color: white;
     }
 }
+@mixin mt() {
+    margin-top: 20px;
+}
 .single img, .album img {
-    margin: 20px;
+    @include mt();
     width: 70%;
 }
 .album p {
@@ -21,16 +26,25 @@
     padding: 50px;
     color:white;
 }
+
 .youtube {
-    margin: 20px;
+    @include mt();
 }
+
 .link {
     list-style: none;
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    span {
+        font-size: 24px;
+    } 
 }
 .link li {
+    color: white;
     margin-left:  50px;
+    border: 1px solid white;
+    padding: 5px;
+    height: 80px;
     &:first-child {
         margin: 0;
     }
@@ -38,3 +52,21 @@
         opacity: .5;
     }
 }
+@mixin btn2($bgColor) {
+    color: white;
+    padding: 5px 10px;
+    background-color: $bgColor; 
+    margin: 20px;
+    width: 220px;
+    height: 45px;
+    line-height: 23px;
+    letter-spacing: 2.4px;
+    text-align: left;
+    padding: 12px 72px 10px;
+    font: {
+        size: 16px;
+        family:BebasNeue-Regular;
+    } 
+
+}
+@import "../modules/_footer";
