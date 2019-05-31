@@ -1,0 +1,90 @@
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+body {
+    background-image: url('https://pmcvariety.files.wordpress.com/2017/04/willsmith_actor.jpg?w=1000&h=563&crop=1');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    color:black;
+
+    
+    @include media(s) {
+        background-image: url('https://www.jetss.com/wp-content/uploads/2019/03/idris-elba-suicide-squad-deadshot.jpg')
+    }
+
+}
+// https://ewedit.files.wordpress.com/2019/04/will-smith-1.jpg
+  
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+.timeline {
+    margin-top: 150px;
+   
+}
+
+.navbar-brand {
+    font-size: 50px;
+    color: white;
+}
+
+.navbar {
+    font-size: 30px; 
+
+}
+
+
+.scroll-part {
+    overflow-y: scroll;
+    width: 550px;
+    height: 400px;
+    @include media(xs) {
+        width: 350px;
+    }
+    @include media(s) {
+        width: 400px;
+    }
+}
+
+.front-text {
+    font-size: 150%;
+    line-height: 50px;
+    color: white;
+    height: 400px;   
+}
+
+.ninetiesH4, .zeroH4, .tensH4 {
+    font-size: 300%;
+    color: white;
+}
+
+.nineties, .zero, .tens {
+    display: flex;
+   p {
+    font-size: 150%;
+    line-height: 50px;
+    color: white;
+   }
+}
+
+
+
+
+
+
+

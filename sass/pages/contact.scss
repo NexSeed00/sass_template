@@ -1,0 +1,73 @@
+//レスポンシブ対応用の変数
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    };
+};
+
+//上下マージン位置
+@mixin margin ($marginTop, $marginBottom) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+}
+
+//inputの幅
+$inputWidthShort: 50%;
+$inputWidthWide: 80%;
+$inputWidthMax: 100%;
+
+//formのデザイン
+form {
+    width: 100%;
+}
+
+.form-group {
+    @include margin(40px, 0);
+    width: $inputWidthShort;
+
+    //レスポンシブデザイン（991px以下）
+    @include media(l) {
+        width: $inputWidthWide;    
+    };
+
+    //レスポンシブデザイン（575px以下）
+    @include media(s) {
+        @include margin(25px, 0);
+        width: $inputWidthMax; 
+    };
+
+    label {
+        @include margin(0, 15px);
+
+        //レスポンシブデザイン（575px以下）
+        @include media(s) {
+        @include margin(0, 5px);
+    };
+    }
+}
+
+.btn {
+    @include margin(50px, 100px);
+    padding: 15px;
+    width: $inputWidthShort;
+
+    //レスポンシブデザイン（991px以下）
+    @include media(l) {
+        width: $inputWidthWide;       
+    };
+
+    //レスポンシブデザイン（575px以下）
+    @include media(s) {
+        padding: 8px;
+        width: $inputWidthMax;       
+    };
+}
+
