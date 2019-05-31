@@ -1,3 +1,23 @@
+//アイコンのmargin-right
+@mixin icon ($marginRight) {
+    margin-right: $marginRight
+};
+
+//レスポンシブ対応用の変数
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    };
+};
+
 .footer{
     position: fixed;
     bottom: 0;
@@ -13,15 +33,30 @@
 
 #facebook{
     color:blue;
-    margin-right: 20px;
+    @include icon(20px);
+
+    //レスポンシブデザイン（575px以下）
+    @include media(m) {
+        @include icon(10px);       
+    };
 }
 
 #twitter{
     color: cyan;
-    margin-right: 20px;
+    @include icon(20px);
+
+    //レスポンシブデザイン（575px以下）
+    @include media(m) {
+        @include icon(10px);       
+    };
 }
 
 #instagram{
     color: rgb(236, 29, 236);
-    margin-right: 100px;
+    @include icon(100px);
+    
+    //レスポンシブデザイン（575px以下）
+    @include media(m) {
+        @include icon(30px);       
+    };
 }
