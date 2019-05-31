@@ -51,16 +51,30 @@ main {
 
 }
 
+.year-btn {
+    @include media(m) {
+        font-size: 80% !important;
+    }
+}
+
 .scroll-part {
     overflow-y: scroll;
     width: 550px;
     height: 400px;
+    @include media(xs) {
+        width: 350px;
+    }
+    @include media(s) {
+        width: 400px;
+    }
 }
 
-
-.ninetiesH4, .zeroH4, .tensH4 {
-    font-size: 300%;
-    line-height: 60px;
+.front-text {
+    font-size: 150% !important;
+    line-height: 50px !important;
+    color: white;
+    height: 400px !important;
+   
     
 }
 .nineties, .zero, .tens {
@@ -68,6 +82,13 @@ main {
    p {
     font-size: 150%;
     line-height: 50px;
+    color: white;
+    @include media(s) {
+        color: white;
+    }
+    @include media(m) {
+        color: black;
+    }
    }
 }
 
