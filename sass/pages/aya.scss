@@ -10,19 +10,28 @@
 .icon {
     @include icon();
 
-    .fas {
+    @mixin same() {
         font-size: 30px;
+    }
+
+    .same{
+        @include same();
+    }
+    .fas {
         margin-left: 20px;
     }
 
     .far {
-        font-size: 30px;
        margin-right: 10px;
     }
     .link {
-        font-size: 30px;
        margin-right: 10px;
     }
+}
+.pagelink li {
+    display: flex;
+    font-family: 'Chalkduster',sans-serif;
+    color: silver;
 }
 
 .itiro {
@@ -95,4 +104,30 @@ footer {
 
 
     
+}
+
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.img1, .img2, .img3 {
+    @include media(l) {
+        height: 200px;
+        width: 200px;
+    };
+
+    @include media(xl) {
+        height: 400px;
+        width: 400px;
+    }
 }
