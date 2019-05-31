@@ -1,0 +1,187 @@
+
+
+@import "../base/_reset";
+
+@mixin text( $color, $textSize){
+    font-family: 'Arial';
+    color: $color;
+    font-size: $textSize;
+    padding: 5px;
+}
+// アニメーションのための準備
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes animationSample {
+    @content;
+  }
+  @-moz-keyframes animationSample {
+    @content;
+  }  
+  @keyframes animationSample {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@include keyframes(animationSample){
+0% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+}
+
+// ＢＧの上に要素を動かす準備
+%posion{
+    z-index: 3;
+    position: absolute;
+} 
+
+// ホーム写真
+.home-bg{
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    position: relative
+}
+
+
+// タイトル
+.group-name{
+    @include text( rgb(240, 230, 230), 100px);
+    @extend %posion;
+    top: 45%;
+    left: 5%;
+    letter-spacing: 2px;
+    
+
+}
+
+.artist-name{
+    @include text(  rgb(240, 230, 230), 20px );
+    @extend .group-name;
+    top:60%;
+    
+   
+}
+
+// ツアーロゴ
+.card-tour-logo{
+    @extend %posion;
+    bottom: 5%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+.card-tour-logo:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+  // Album info
+  .card-left{
+    @include text( rgb(167, 145, 23), 20px );
+    @extend %posion;
+    bottom: 5%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    border-radius: 30%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 2em;
+    padding-top: 2%;
+    
+    
+  }
+
+  .card-left:hover{
+    @include animation(animationSample 2s ease 0.5s);	
+    cursor: pointer;
+  }
+
+
+// タイトルアニメーション
+
+#fadeInName{
+  @include animation(animationSample 2s ease 0.5s);	
+  
+  }
+    
+// countdown-clock
+
+@mixin bg(){
+  background: {
+    image: url(../../assets/img/background-arashi.jpg);
+     repeat: no-repeat;
+     size: cover;
+     attachment: fixed;
+}
+}
+
+.yycountdown-box{
+    text-align:center;
+    margin: 0;
+    @include text( black, 50px);
+    @include bg();
+    
+  
+  }
+
+  .mg{
+    margin-bottom: .5em;
+  }
+
+
+  #timer .yycountdown-box .yyc-day{
+    font-size:2.0em;
+    color: red;
+  }
+  #timer .yycountdown-box .yyc-hou{
+    font-size:2.0em;
+    color:#F4C300;
+  }
+  #timer .yycountdown-box .yyc-min{
+    font-size:2.0em;
+    color: purple;
+  }
+  #timer .yycountdown-box .yyc-sec{
+    font-size:2.0em;
+    color: green;
+  }
+   
+  #timer .yycountdown-box .yyc-day-text,
+  #timer .yycountdown-box .yyc-hou-text,
+  #timer .yycountdown-box .yyc-min-text,
+  #timer .yycountdown-box .yyc-sec-text{
+    font-size:1.0em;
+  }
+
+  // アニメーション
+
+  #fadeInTimer{
+    @include animation(animationSample 10s ease 1.5s);	
+    }
+  
+    // message
+    h2{
+      @include text(black, 25px);
+    }
+
+    .card-body{
+      line-height: 2em;
+    }
+
+    // footer scss import
+
+    @import "../modules/_footer";
+  

@@ -6,13 +6,13 @@ var sassGlob = require('gulp-sass-glob'); //パーシャルをまとめて読み
 var sourcemaps = require('gulp-sourcemaps'); // source map作成 ②
 var autoprefixer = require('gulp-autoprefixer'); // ベンダープレフィックス ③
 var cleanCSS = require('gulp-clean-css'); // minify ④
-var rename = require('gulp-rename'); //ファイル名変更 ⑤
+var rename = require('gulp-rename'); //ファイル名変更 ⑤ L20でコメントアウト
 
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
-    .pipe(cleanCSS({keepBreaks: false}))
+    // .pipe(cleanCSS({keepBreaks: false}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -28,3 +28,5 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/**/*.scss', gulp.task(['sass']));
 });
+
+

@@ -1,0 +1,72 @@
+
+.works {
+    background: {
+        image: url(../../assets/img/JACA-5761-1440x1269.jpg);
+        repeat: no-repeat;
+        size: cover;
+        attachment: fixed;
+    }
+
+    text-align: center;
+    h1 {
+        color: white;
+    }
+}
+@mixin mt() {
+    margin-top: 20px;
+}
+.single img, .album img {
+    @include mt();
+    width: 70%;
+}
+.album p {
+    background-color:  rgba(#000, 0.5);
+    border: 2px solid white;
+    margin: 50px 150px;
+    padding: 50px;
+    color:white;
+}
+
+.youtube {
+    @include mt();
+}
+
+.link {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    span {
+        font-size: 24px;
+    } 
+}
+.link li {
+    color: white;
+    margin-left:  50px;
+    border: 1px solid white;
+    padding: 5px;
+    height: 80px;
+    &:first-child {
+        margin: 0;
+    }
+    &:hover {
+        opacity: .5;
+    }
+}
+@mixin btn2($bgColor) {
+    color: white;
+    padding: 5px 10px;
+    background-color: $bgColor; 
+    margin: 20px;
+    width: 220px;
+    height: 45px;
+    line-height: 23px;
+    letter-spacing: 2.4px;
+    text-align: left;
+    padding: 12px 72px 10px;
+    font: {
+        size: 16px;
+        family:Arial;
+    } 
+
+}
+@import "../modules/_footer";
