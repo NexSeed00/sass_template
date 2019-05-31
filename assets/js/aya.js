@@ -1,6 +1,9 @@
 // import { DH_UNABLE_TO_CHECK_GENERATOR } from "constants";
 
-let position1 = 0;
+let position = 0;
+let position1 = 1;
+let position2 = 2;
+let position3 = 3;
 
 $(function() {
     $('.fa-baseball-ball').on('click', function() {
@@ -24,11 +27,12 @@ $('.fa-times-circle').on('click',function() {
         $('.introduce').remove();
     });
 
-    $('a'),on('click', function() {
-        $('#audio').get(0).play();
-    })
 });
 
+$('.link').on('click', function() {
+    console.log('AAA');
+    window.location.href = "/Users/uezatoaya/Desktop/NexSeed/noboteam/openpage.html";
+});
 
 
     $('.img1').on('click',function() {
@@ -110,49 +114,75 @@ $('.fa-times-circle').on('click',function() {
 
     
 
+    $('.akirasan').on('click', function() {
+        console.log('AAA');
+
+        $('#audio').get(0).play();
+        
+    })
+
     $('.akirasan').on('mouseover', function() {
 
-        if (position1 == 0){
+        console.log('AAA');
+
+        if (position == 0){
             $('.akirasan').animate({
                 'top': '-100px',
                 'left': '270px',
+        
+            },5000)
+
+            position = 1;
+        }
+        
+    })
+
+
+    $('.akirasan').on('mouseover',function() {
+        if(position1 == 1) {
+
+            $('.akirasan').animate({
+                'top': '-190px',
+                'left': '-5px',  
+            },5000)
+
+            position1 = 2;
+        }
+        
+    })
+
+    $('.akirasan').on('mouseover',function() {
+        if(position2 == 2) {
+
+            $('.akirasan').animate({
+                'top': '-100px',
+                'left': '-260px',
                 
             },5000)
 
-            position1 = 1;
+            position2 = 3;
+
         }
-
-        console.log('AAA');
-        
-        
-    })
-    $('.akirasan').on('click',function() {
-        $('.akirasan').animate({
-            'top': '-190px',
-            'left': '-5px',  
-        },5000)
-
     
     })
 
-    $('.akirasan').on('click',function() {
-        $('.akirasan').animate({
-            'top': '-100px',
-            'left': '-260px',
-            
-        },5000)
+    $('.akirasan').on('mouseover',function() {
+        if(position3 == 3) {
 
+            $('.akirasan').animate({
+                'top': '0px',
+                'left': '0px',
+                
+            },5000)
+
+            position3 = 0;
+
+        }
     
     })
 
-    $('.akirasan').on('click',function() {
-        $('.akirasan').animate({
-            'top': '0px',
-            'left': '0px',
-            
-        },5000)
-
-    
+    $('.fa-trophy').on('click', function(){
+        $('#video').fadeIn();
     })
 
 

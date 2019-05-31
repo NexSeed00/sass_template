@@ -1,9 +1,7 @@
 @import "./base/_reset.scss";
+@import "./base/**";  //**は全部インポートしているもの。
 
-@import "./modules/header";
-
-@import "./modules/footer";
+@import "./modules/**";
+// @import "./modules/footer";
 
 // @import "./pages/lightbox.scss";
-
-@import "./base/**";  //**は全部インポートしているもの。
