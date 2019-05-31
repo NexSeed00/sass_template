@@ -1,0 +1,154 @@
+
+$bgColor:grey;
+
+main{
+     height: 600px;
+     background-image: url(../../img/top.jpg);
+     background-size: cover;
+    // background-color:$bgColor;
+    // padding: 20px;
+
+    .top{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+
+    .tittle{
+        color: white;
+        font-size: 130px;
+        font-weight: bold;
+        font-family: cursive;
+        text-align: center;
+    }
+
+    
+    .btn-design{
+        color:navy;
+        background-color: beige;  
+        border-color: beige;
+        height: 100px;
+        font-family: cursive;
+        font-size: 50px;
+        font-weight: bold;
+    }    
+
+    
+
+}
+
+
+
+.fa-running{
+    color: white;
+    font-size: 150px;
+    margin-top: 20px;
+}
+
+
+.main{
+    margin-top: 40px;
+    margin-left: 800px;
+}
+
+
+.menu{
+        // display: flex;
+        // justify-content: space-around;
+        background-color: black;
+        padding: 20px;
+    
+    
+
+    .design{
+    height: 300px;
+    width: 300px;
+    background-color: $bgColor;
+    border-radius: 50%;
+    text-align: center;
+        
+        font-size: 40px;
+        font-weight: bold;
+        font-family: cursive;
+        margin-top: 60px;
+        
+    
+    }
+
+  
+   
+
+  .design:hover{
+        opacity: 0.5;
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+
+// レスポンシブ対応
+// map (JSの連想配列みたいなもの)
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+);
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.fa-running {
+
+    @include media(m) {
+        font-size: 100px;
+    };
+
+
+    @include media(xs) {
+        font-size: 80px;
+    };
+
+    
+}
+
+.tittle{
+
+    @include media(m) {
+        font-size: 100px;
+    };
+
+
+    @include media(s) {
+        font-size: 80px;
+    };
+
+    
+}
+
+.main{
+    @include media(l) {
+        margin-left: 600px;
+    };
+
+    @include media(m) {
+        margin-left: 400px;
+    };
+
+
+    @include media(s) {
+        margin-left: 90px;
+    };
+    
+}
