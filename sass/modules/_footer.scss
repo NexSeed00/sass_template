@@ -1,3 +1,20 @@
+@mixin btn2($bgColor) {
+    color: white;
+    padding: 5px 10px;
+    background-color: $bgColor; 
+    margin: 20px;
+    width: 220px;
+    height: 45px;
+    line-height: 23px;
+    letter-spacing: 2.4px;
+    text-align: left;
+    padding: 12px 72px 10px;
+    font: {
+        size: 16px;
+        family:Arial;
+    } 
+
+}
 footer {
     height: 300px;
     text-align: center;
