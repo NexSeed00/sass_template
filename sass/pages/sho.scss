@@ -50,11 +50,13 @@ $breakpoints: (
 main {
     height: 100vh;
     width: 100%;
-    background-image: url(../../assets/img/Culture_AladdinTrailer.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     position: relative;
+    background: {
+        image: url(../../assets/img/Culture_AladdinTrailer.jpg);
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    };
 
     //レスポンシブデザイン（768px以下）
     @include media(m) {
@@ -107,7 +109,7 @@ main {
         @include media(l) {
             height: 25%;
             transform: rotate(-15deg);
-            @include positionLeft(20%, 35%)
+            @include positionLeft(20%, 35%);
         };
 
         // レスポンシブデザイン（768px以下）
@@ -118,7 +120,7 @@ main {
          // レスポンシブデザイン（575px以下）
          @include media(s) {
             height: 15%;  
-            @include positionLeft(15%, 20%)
+            @include positionLeft(15%, 20%);
         };
     };
 
@@ -161,7 +163,7 @@ main {
 
         //レスポンシブデザイン（768px以下）
         @include media(m) {
-            @include positionLeft(20%, 65%)
+            @include positionLeft(20%, 65%);
         };
 
         // レスポンシブデザイン（575px以下）
@@ -174,6 +176,7 @@ main {
         @include positionRight(5%, 83%);
         color: $fontColorBase;
         cursor: pointer;
+        opacity: 0.5;
 
         // レスポンシブデザイン（575px以下）
         @include media(s) {
@@ -182,6 +185,7 @@ main {
         
         &:hover {
             color: $colorHover;
+            opacity: 1;
         };
     };
 };
