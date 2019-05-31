@@ -1,0 +1,50 @@
+@mixin btn2($bgColor) {
+    color: white;
+    padding: 5px 10px;
+    background-color: $bgColor; 
+    margin: 20px;
+    width: 220px;
+    height: 45px;
+    line-height: 23px;
+    letter-spacing: 2.4px;
+    text-align: left;
+    padding: 12px 72px 10px;
+    font: {
+        size: 16px;
+        family:Arial;
+    } 
+
+}
+footer {
+    height: 300px;
+    text-align: center;
+    padding: 30px;
+    background: {
+        color: #000;
+    }
+    .tw {
+        @include btn2(#26A1EC);
+    }
+    .sh {
+        @include btn2(#425998);
+    }
+    .j {
+        margin: 20px;
+        width: 300px;
+        height: 45px;
+        line-height: 23px;
+        letter-spacing: 2.4px;
+        color: white;
+        background-color: #D0B367;
+        border-radius: 50px;
+    }
+    .o-no img {
+        position: fixed;
+        width: 120px;
+        height: 120px;
+        right: 20px;
+        bottom: 30px;
+        border-radius: 50%;
+        display: none;
+    } 
+}

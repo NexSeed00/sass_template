@@ -1,10 +1,9 @@
-// _と拡張子を忘れずに！**でファイル中身を全部コピーできる。
-// @import "../base/_reset.scss";
 
-@import "../base/_reset.scss";
+
+@import "../base/_reset";
 
 @mixin text( $color, $textSize){
-    font-family: 'BebasNeue-Regular';
+    font-family: 'Arial';
     color: $color;
     font-size: $textSize;
     padding: 5px;
@@ -39,7 +38,7 @@
 }
 }
 
-// 写真の上に要素を動かす準備
+// ＢＧの上に要素を動かす準備
 %posion{
     z-index: 3;
     position: absolute;
@@ -74,7 +73,7 @@
 }
 
 // ツアーロゴ
-.tour-logo{
+.card-tour-logo{
     @extend %posion;
     bottom: 5%;
     right: 5%;
@@ -82,29 +81,30 @@
     height: 200px;
     opacity: 0;
   }
-.tour-logo:hover{
+.card-tour-logo:hover{
     @include animation(animationSample 2s ease 0.5s);	
     cursor: pointer;
   }
 
   // Album info
-  .album-info{
-    @include text( white, 20px );
+  .card-left{
+    @include text( rgb(167, 145, 23), 20px );
     @extend %posion;
     bottom: 5%;
     left: 5%;
     width: 200px;
     height: 200px;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30%;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     line-height: 2em;
-    padding-top: 1%;
+    padding-top: 2%;
     
     
   }
 
-  .album-info:hover{
+  .card-left:hover{
     @include animation(animationSample 2s ease 0.5s);	
     cursor: pointer;
   }
@@ -119,11 +119,26 @@
     
 // countdown-clock
 
+@mixin bg(){
+  background: {
+    image: url(../../assets/img/background-arashi.jpg);
+     repeat: no-repeat;
+     size: cover;
+     attachment: fixed;
+}
+}
+
 .yycountdown-box{
     text-align:center;
-    margin:10px 0;
+    margin: 0;
     @include text( black, 50px);
-    // font-family: 'M PLUS Rounded 1c', sans-serif;
+    @include bg();
+    
+  
+  }
+
+  .mg{
+    margin-bottom: .5em;
   }
 
 
@@ -156,5 +171,17 @@
   #fadeInTimer{
     @include animation(animationSample 10s ease 1.5s);	
     }
+  
+    // message
+    h2{
+      @include text(black, 25px);
+    }
 
- 
+    .card-body{
+      line-height: 2em;
+    }
+
+    // footer scss import
+
+    @import "../modules/_footer";
+  
