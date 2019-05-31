@@ -1,18 +1,60 @@
+// responsive対応
+
+$breakpoints: (
+    xs: "only screen and (max-width: 320px)",
+    s: "only screen and (max-width: 575px)",
+    m: "only screen and (max-width: 768px)",
+    l: "only screen and (max-width: 991px)",
+    xl: "only screen and (max-width: 1199px)",
+    );
+
+    @mixin media($breakpoint) {
+        @media #{map-get($breakpoints, $breakpoint)} {
+            @content;
+        }
+    }
+    
 .carousel{
     width: 100%;
     height: 100vh;
     z-index: -10;
     position: relative;
+
+    @include media (m){
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    @include media (s){
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    }
+
+    @include media (xs){
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    }
 }
+
+// .carousel-item{
+//     @include media (l){
+//         width: 100%;
+//         height: 100vh;
+//     }
+// }
 
 .ue{
     position: absolute;
+
 };
 
 .navigation{
     position: absolute;
-    bottom: 20;
     right: 0;
+
     
     ::-webkit-scrollbar {
         display: none;
@@ -20,9 +62,12 @@
     }
     // width: 40%;
     // height: 10%;
+
+    @include media (l){
+    position: absolute;
+    left: 0;
+    }
 }
-
-
 
 
 .navnav{
@@ -32,12 +77,19 @@
     :hover{
         color:fade-in($color:#ecd073 , $amount: 0.3)
     };
+
 }
+
+// .nav-link{
+//     @include media(l){
+//         display: none;
+//       }
+// }
 
 .history{
     
     overflow-y: scroll;
-    // overflow-y: hidden;
+    
     width: 480px;
     height: 200px;
 
@@ -52,26 +104,11 @@
         color: lavender;
     }
 
-    // ::-webkit-scrollbar {
-    //     display: none;
-    //     -webkit-appearance: none;
-    // 
-
 
 };
 
-
- // レスポンシブ対応
-   // map (JSの連想配列みたいなもの)
-   $breakpoints: (
-    xs: "only screen and (max-width: 320px)",
-    s: "only screen and (max-width: 575px)",
-    m: "only screen and (max-width: 768px)",
-    l: "only screen and (max-width: 991px)",
-    xl: "only screen and (max-width: 1199px)",
-    );
-
-
-// .main{
-//     display: none;
+// .explode{
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: center;
 // }

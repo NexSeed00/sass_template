@@ -27,14 +27,3 @@ header {
 .nav-link {
     font-family: 'Papyrus','Segoe Script',sans-serif;
     font-size: 25px;
-
-    //レスポンシブデザイン（768px以下）
-    @include media(m) {
-        font-size: 15px;
-    };
-
-    //レスポンシブデザイン（575px以下）
-    @include media(m) {
-        font-size: 10px;
-    };
-};
