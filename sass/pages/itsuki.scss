@@ -35,10 +35,7 @@ main {
 }
 .timeline {
     margin-top: 150px;
-    @include media(s) {
-        margin-top: 100px;
-    }
-    
+   
 }
 
 .navbar-brand {
@@ -51,11 +48,6 @@ main {
 
 }
 
-.year-btn {
-    @include media(m) {
-        font-size: 80% !important;
-    }
-}
 
 .scroll-part {
     overflow-y: scroll;
@@ -70,12 +62,10 @@ main {
 }
 
 .front-text {
-    font-size: 150% !important;
-    line-height: 50px !important;
+    font-size: 150%;
+    line-height: 50px;
     color: white;
-    height: 400px !important;
-   
-    
+    height: 400px;   
 }
 
 .ninetiesH4, .zeroH4, .tensH4 {
